@@ -11481,6 +11481,7 @@ html {
   bottom: 0px;
   background-image: url('/assets/img/portfolio/cabin.png') !important;
   background-repeat: no-repeat;
+  display:inline-block;
   border-radius: 20px 20px 0px 0px;
 }
 
