@@ -11478,8 +11478,23 @@ html {
 .portfolio-item .h2-1{
   color: #fff !important;
   padding-left: 2%;
+  padding-bottom: 0px;
+  width: 100% !important;
   bottom: 0px;
-  background-image: url('/assets/img/portfolio/cabin.png') !important;
+  margin-bottom: 0px;
+  background-image: url('../assets/img/portfolio/cabin.png') !important;
+  background-repeat: no-repeat;
+  display:inline-block;
+  border-radius: 20px 20px 0px 0px;
+}
+.portfolio-item .h2-2{
+  color: #fff !important;
+  padding-left: 2%;
+  padding-bottom: 0px;
+  width: 100% !important;
+  bottom: 0px;
+  margin-bottom: 0px;
+  background-image: url('../assets/img/portfolio/cake.png') !important;
   background-repeat: no-repeat;
   display:inline-block;
   border-radius: 20px 20px 0px 0px;
