@@ -11499,6 +11499,57 @@ html {
   display:inline-block;
   border-radius: 20px 20px 0px 0px;
 }
+.portfolio-item .h2-3{
+  color: #fff !important;
+  padding-left: 2%;
+  padding-bottom: 0px;
+  width: 100% !important;
+  bottom: 0px;
+  margin-bottom: 0px;
+  background-image: url('../assets/img/portfolio/circus.png') !important;
+  background-repeat: no-repeat;
+  display:inline-block;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.portfolio-item .h2-4{
+  color: #fff !important;
+  padding-left: 2%;
+  padding-bottom: 0px;
+  width: 100% !important;
+  bottom: 0px;
+  margin-bottom: 0px;
+  background-image: url('../assets/img/portfolio/game.png') !important;
+  background-repeat: no-repeat;
+  display:inline-block;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.portfolio-item .h2-5{
+  color: #fff !important;
+  padding-left: 2%;
+  padding-bottom: 0px;
+  width: 100% !important;
+  bottom: 0px;
+  margin-bottom: 0px;
+  background-image: url('../assets/img/portfolio/safe.png') !important;
+  background-repeat: no-repeat;
+  display:inline-block;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.portfolio-item .h2-6{
+  color: #fff !important;
+  padding-left: 2%;
+  padding-bottom: 0px;
+  width: 100% !important;
+  bottom: 0px;
+  margin-bottom: 0px;
+  background-image: url('../assets/img/portfolio/submarine.png') !important;
+  background-repeat: no-repeat;
+  display:inline-block;
+  border-radius: 20px 20px 0px 0px;
+}
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
