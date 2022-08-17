@@ -307,13 +307,13 @@ svg {
 }
 
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
-  img.porcodio {max-width: 30% !important;
+  imglogo {max-width: 30% !important;
     padding-top: 40px !important;
     width: 200px !important;
   }
 } 
 
-img.porcodio {max-width: 10% !important;
+imglogo {max-width: 10% !important;
     padding-top: 40px  !important;
     width: 200px !important;
   }
