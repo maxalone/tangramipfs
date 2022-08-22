@@ -10,4 +10,4 @@ this is published in https://github.tangram.page/tangramipfs/ github pages
 
 and in cloud at https://ipfs.tangram.page/ thru fleek
 
-and in ipfs blockchain at https://gateway.ipfs.io/ipns/wwwipfs.tangram.page/  thru ipns name (v.0.0)
+and in ipfs blockchain at https://gateway.ipfs.io/ipns/wwwipfs.tangram.page/  thru ipns name and dnslink (v.0.0)
