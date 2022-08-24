@@ -78,8 +78,7 @@ xhr.onreadystatechange = function () {
       console.log(xhr.status);
       var myJson = JSON.parse(xhr.responseText);
       document.getElementById("kubodim").textContent=myJson.kdim;
-    console.log("kubodim="+myJson.kdim)
-
+      document.getElementById("kuboobj").textContent=myJson.NumObjects;
    }};
 
 xhr.send();
