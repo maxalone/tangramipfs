@@ -79,4 +79,5 @@ xhr.onreadystatechange = function () {
 
 xhr.send();
 document.getElementById("kubodim").textContent=xhr.responseText;
+console.log("kubodim="+xhr.responseText)
 }
