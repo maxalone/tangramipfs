@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 
-
+    kubodim();
 
 
 
