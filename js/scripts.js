@@ -54,14 +54,16 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 
-    kubodim();
+   
 
 
 
 
 });
 
-
+window.onload = function() {
+    kubodim();
+  };
 
 function kubodim(){
     var url = "https://meta.tangram.page/kubodim";
