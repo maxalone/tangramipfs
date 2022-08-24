@@ -63,17 +63,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 window.onload = function() {
     kubodim();
-    $('.counter-value').each(function(){
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        },{
-            duration: 3500,
-            easing: 'swing',
-            step: function (now){
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
+    
   };
 
 function kubodim(){
@@ -90,6 +80,18 @@ xhr.onreadystatechange = function () {
       var myJson = JSON.parse(xhr.responseText);
       document.getElementById("kubodim").textContent=myJson.kdim;
       document.getElementById("kuboobj").textContent=myJson.NumObjects;
+      
+    $('.counter-value').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 3500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
    }};
 
 xhr.send();
