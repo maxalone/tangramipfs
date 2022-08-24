@@ -76,9 +76,9 @@ xhr.setRequestHeader("Accept", "application/json");
 xhr.onreadystatechange = function () {
    if (xhr.readyState === 4) {
       console.log(xhr.status);
-      
-      document.getElementById("kubodim").textContent=xhr.kdim;
-    console.log("kubodim="+xhr.kdim)
+      var myJson = JSON.parse(this.responseText);
+      document.getElementById("kubodim").textContent=myJson.kdim;
+    console.log("kubodim="+myJson.kdim)
 
    }};
 
