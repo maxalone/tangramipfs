@@ -63,7 +63,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
 window.onload = function() {
     kubodim();
-    
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+      })
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
   };
 
 function kubodim(){
