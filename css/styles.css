@@ -11628,8 +11628,8 @@ html {
     background: #fff;
     text-align: center;
     width: 200px;
-    min-height: 215px;
-    padding: 10px 15px;
+    /*min-height: 215px;
+    padding: 10px 15px;*/
     margin: 0 auto;
     border-radius: 30px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -11662,7 +11662,7 @@ html {
     content: "";
     background: #8AC248;
     width: 120px;
-    height: 90px;
+    height: 80px;
     border-radius: 10px 10px 0 0;
     transform: translateX(-50%);
     position: absolute;
@@ -11685,7 +11685,7 @@ html {
 }
 .counter .counter-value{
     color: #7CA936;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
 }
@@ -11702,7 +11702,7 @@ html {
 .counter.gray .counter-icon:before{ background-color: #666; }
 .counter.gray .counter-value{ color: #666; }
 @media screen and (max-width:990px){
-    .counter{ margin-bottom: 40px; }
+    .counter{ margin-bottom: 20px; }
 }
 /*
 -------------- ANIMAZIONE LOGHETTI COUNTER
