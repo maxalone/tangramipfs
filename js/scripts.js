@@ -63,13 +63,16 @@ window.addEventListener('DOMContentLoaded', event => {
 
 window.onload = function() {
     kubodim();
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-      })
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-      })
+    
+
   };
+
+
+$(document).ready(function(){
+    $('#popoverData').popover();
+    $('#popoverOption').popover({ trigger: "hover" });
+});
+
 
 function kubodim(){
     var url = "https://meta.tangram.page/kubodim";
