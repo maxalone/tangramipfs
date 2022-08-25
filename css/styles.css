@@ -7034,6 +7034,11 @@ textarea.form-control-lg {
   flex-direction: row !important;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .flex-column {
   flex-direction: column !important;
 }
@@ -7132,6 +7137,7 @@ textarea.form-control-lg {
 
 .align-items-center {
   align-items: center !important;
+  justify-content: center !important;
 }
 
 .align-items-baseline {
