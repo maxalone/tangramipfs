@@ -71,37 +71,86 @@ window.onload = function() {
 $(document).ready(function(){
     $('#popoverData').popover();
     $('#popoverOption').popover({ trigger: "hover" });
+    setAnimation();
 });
 
 
 function kubodim(){
     var url = "https://meta.tangram.page/kubodim";
-
-var xhr = new XMLHttpRequest();
-xhr.open("GET", url);
-
-xhr.setRequestHeader("Accept", "application/json");
-
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
-      console.log(xhr.status);
-      var myJson = JSON.parse(xhr.responseText);
-      document.getElementById("kubodim").textContent=myJson.kdim;
-      document.getElementById("kuboobj").textContent=myJson.NumObjects;
-      
-    $('.counter-value').each(function(){
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        },{
-            duration: 3500,
-            easing: 'swing',
-            step: function (now){
-                $(this).text(Math.ceil(now));
-            }
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        console.log(xhr.status);
+        var myJson = JSON.parse(xhr.responseText);
+        document.getElementById("kubodim").textContent=myJson.kdim;
+        document.getElementById("kuboobj").textContent=myJson.NumObjects;
+        $('.counter-value.fromweb').addClass('pending');
+        /*$('.counter-value.fromweb').each(function(){
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            },{
+                duration: 3500,
+                easing: 'swing',
+                step: function (now){
+                    $(this).text(Math.ceil(now));
+                }
+            });
         });
-    });
-   }};
-
-xhr.send();
+        */
+        setAnimation();
+    }};
+    xhr.send();
 }
 
+// add scroll event to check for animation on scroll
+$(document).scroll(function() {
+    // call newly created function
+    setAnimation();
+  });
+
+function setAnimation() {
+    // add additional class pending to your .counter-value element to check whether animation is pending or not
+    // retrieve only pending elements and loop over it
+    $('.counter-value.pending').each(function() {
+      // check if element is in view and visible
+      var isElementInView = Utils.isElementInView($(this), false);    
+      if (isElementInView) {
+        console.log("visibili");
+        // if visible then remove class pending so it won't animate multiple times
+        $(this).removeClass('pending');
+        // initialize animation
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 4500,
+          easing: 'swing',
+          step: function(now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+      }
+    });
+  }
+
+  function Utils() {
+    }
+
+  Utils.prototype = {
+    constructor: Utils,
+    isElementInView: function(element, fullyInView) {
+      var pageTop = $(window).scrollTop();
+      var pageBottom = pageTop + $(window).height();
+      var elementTop = $(element).offset().top;
+      var elementBottom = elementTop + $(element).height();
+  
+      if (fullyInView === true) {
+        return ((pageTop < elementTop) && (pageBottom > elementBottom));
+      } else {
+        return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+      }
+    }
+  };
+  
+  var Utils = new Utils();

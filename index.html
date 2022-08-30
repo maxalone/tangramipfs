@@ -17,6 +17,7 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container"><img style="max-width: 10% !important;width: 150px !important;" src="assets/img/tangram_logo_bianco.svg" alt="Tangram.page logo" />
@@ -70,7 +71,7 @@
                                 </div>
                                 <div class="counter-content">
                                     <h3>Spazio Nodo MB</h3>
-                                    <span class="counter-value" id="kubodim"></span> 
+                                    <span class="counter-value fromweb" id="kubodim"></span> 
                                 </div>
                             </div>
                         </div>
@@ -81,7 +82,7 @@
                                 </div>
                                 <div class="counter-content">
                                     <h3>Oggetti ospitati</h3>
-                                    <span class="counter-value" id="kuboobj"></span>
+                                    <span class="counter-value fromweb" id="kuboobj"></span>
                                 </div>
                             </div>
                         </div>
@@ -95,29 +96,29 @@
                
                     <div class="container d-flex align-items-center flex-container text-center">
                         <div class="col-md-3 col-sm-6">
-                            <div class="counter red">
+                            <div class="counter red pending">
                                 <div class="counter-icon">
                                     <i class="fa fa-building-columns"></i>
                                 </div>
                                 <div class="counter-content">
                                     <h3>Regioni mq</h3>
-                                    <span class="counter-value">196605</span> 
+                                    <span class="counter-value pending">196605</span> 
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <div class="counter gray">
+                            <div class="counter gray pending">
                                 <div class="counter-icon">
                                     <i class="fa fa-image"></i>
                                 </div>
                                 <div class="counter-content">
                                     <h3>Primitive ospitate</h3>
-                                    <span class="counter-value">5452</span>
+                                    <span class="counter-value pending">5452</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
+
             </div>
             
 
@@ -593,6 +594,7 @@
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
@@ -600,6 +602,6 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        
     </body>
 </html>
