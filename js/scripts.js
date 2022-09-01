@@ -51,29 +51,17 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-
-
-
-   
-
-
-
-
 });
 
 window.onload = function() {
     kubodim();
-    
-
   };
-
 
 $(document).ready(function(){
     $('#popoverData').popover();
     $('#popoverOption').popover({ trigger: "hover" });
     setAnimation();
 });
-
 
 function kubodim(){
     var url = "https://meta.tangram.page/kubodim";
@@ -87,19 +75,6 @@ function kubodim(){
         document.getElementById("kubodim").textContent=myJson.kdim;
         document.getElementById("kuboobj").textContent=myJson.NumObjects;
         $('.counter-value.fromweb').addClass('pending');
-        /*$('.counter-value.fromweb').each(function(){
-            $(this).prop('Counter',0).animate({
-                Counter: $(this).text()
-            },{
-                duration: 3500,
-                easing: 'swing',
-                step: function (now){
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
-        */
-        setAnimation();
     }};
     xhr.send();
 }
@@ -111,16 +86,10 @@ $(document).scroll(function() {
   });
 
 function setAnimation() {
-    // add additional class pending to your .counter-value element to check whether animation is pending or not
-    // retrieve only pending elements and loop over it
     $('.counter-value.pending').each(function() {
-      // check if element is in view and visible
       var isElementInView = Utils.isElementInView($(this), false);    
       if (isElementInView) {
-        console.log("visibili");
-        // if visible then remove class pending so it won't animate multiple times
         $(this).removeClass('pending');
-        // initialize animation
         $(this).prop('Counter', 0).animate({
           Counter: $(this).text()
         }, {
@@ -144,7 +113,6 @@ function setAnimation() {
       var pageBottom = pageTop + $(window).height();
       var elementTop = $(element).offset().top;
       var elementBottom = elementTop + $(element).height();
-  
       if (fullyInView === true) {
         return ((pageTop < elementTop) && (pageBottom > elementBottom));
       } else {
