@@ -16,11 +16,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Matomo -->
-<script>
-    // require user tracking consent before processing data
-_paq.push(['requireConsent']);
-
-// OR require user cookie consent before storing and using any cookies
+<script> 
+// require user cookie consent before storing and using any cookies
 _paq.push(['requireCookieConsent']);
 
 _paq.push(['trackPageView']);
@@ -63,10 +60,6 @@ _paq.push(['trackPageView']);
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
-            <iframe
-            style="border: 0; height: 200px; width: 600px;"
-            src="https://matom.tangram.page/index.php?module=CoreAdminHome&action=optOut&language=it"
-            ></iframe>
             <div class="container d-flex align-items-center flex-container text-center">
                 <!-- Masthead Avatar Image-->
                 <img class=" mb-5" width="100" src="assets/img/wavataaars.svg" alt="..." />
@@ -336,6 +329,15 @@ _paq.push(['trackPageView']);
                             .
                         </p>
                     </div>
+                </div>
+                <div class="row">
+                    <div class=" py-4 text-center text-white">
+                        <div class="container"><small>GDPR / Privacy : consenso all'uso di cookie tecnici</small></div>
+                    </div>
+                    <iframe
+                    style="border: 0; height: 200px; width: 600px;"
+                    src="https://matom.tangram.page/index.php?module=CoreAdminHome&action=optOut&language=it"
+                    ></iframe>
                 </div>
             </div>
         </footer>
