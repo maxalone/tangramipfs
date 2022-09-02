@@ -55,13 +55,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
 window.onload = function() {
     kubodim();
-  };
+  }
 
 $(document).ready(function(){
-    $('#popoverData').popover();
-    $('#popoverOption').popover({ trigger: "hover" });
+
     setAnimation();
-});
+})
 
 function kubodim(){
     var url = "https://meta.tangram.page/kubodim";
@@ -83,7 +82,7 @@ function kubodim(){
 $(document).scroll(function() {
     // call newly created function
     setAnimation();
-  });
+  })
 
 function setAnimation() {
     $('.counter-value.pending').each(function() {

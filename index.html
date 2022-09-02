@@ -17,6 +17,14 @@
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Matomo -->
 <script>
+    // require user tracking consent before processing data
+_paq.push(['requireConsent']);
+
+// OR require user cookie consent before storing and using any cookies
+_paq.push(['requireCookieConsent']);
+
+_paq.push(['trackPageView']);
+
     var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
